@@ -5,7 +5,7 @@ workers_dev = true
 
 [vars]
 # Replace this with the numeric Telegram ID of the bot owner.
-OWNER_ID = "REPLACE_WITH_YOUR_TELEGRAM_USER_ID"
+OWNER_ID = "6027967703"
 
 # Optional. The worker defaults to 35 recipients per broadcast batch.
 BROADCAST_BATCH = "35"
