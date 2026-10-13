@@ -1,0 +1,21 @@
+name = "telegram-anonymous-contact-bot"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+[vars]
+# Replace this with the numeric Telegram ID of the bot owner.
+OWNER_ID = "REPLACE_WITH_YOUR_TELEGRAM_USER_ID"
+
+# Optional. The worker defaults to 35 recipients per broadcast batch.
+BROADCAST_BATCH = "35"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "telegram-anonymous-contact-bot-db"
+# Replace this with the database_id returned by `npx wrangler d1 create`.
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[triggers]
+# Required for processing scheduled broadcast batches.
+crons = ["* * * * *"]
